@@ -4,8 +4,11 @@
     "module": "node16",
     "lib": ["ES2022", "DOM"],
     "moduleResolution": "node16",
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
     "rootDir": ".",
     "outDir": "build",
+    "declaration": true,
     "allowSyntheticDefaultImports": true,
     "importHelpers": true,
     "alwaysStrict": true,
@@ -17,7 +20,8 @@
     "noUnusedParameters": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
   },
-  "include": ["src", "__tests__"]
+  "include": ["src", "__tests__", "examples"],
+  "exclude": ["docs"]
 }
