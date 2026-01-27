@@ -1,3 +1,8 @@
+import { Hono } from 'hono';
+const app = new Hono();
+
+app.get('/', (c) => c.text('Hono!'));
+
 /**
  * Some predefined delay values (in milliseconds).
  */
@@ -17,7 +22,7 @@ export enum Delays {
 function delayedHello(
   name: string,
   delay: number = Delays.Medium,
-): Promise<string|undefined> {
+): Promise<string | undefined> {
   return new Promise((resolve: (value?: string) => void) =>
     setTimeout(() => resolve(`Hello, ${name}`), delay),
   );
